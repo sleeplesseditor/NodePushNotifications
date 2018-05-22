@@ -6,5 +6,5 @@ To get this up and running, follow these steps:
 
 1) cd NodePushNotifications
 2) ./node_modules/.bin/web-push generate-vapid-keys
-3) Enter public and private key into marked sections
+3) Enter public and private key into marked sections of index.js and client/client.js
 4) npm start

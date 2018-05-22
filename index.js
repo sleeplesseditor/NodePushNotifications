@@ -14,7 +14,11 @@ app.use(bodyParser.json());
 const publicVapidKey ='BOtEUniVhvsJsecdOY15dHRbASpGG-ZvPPvNerUgm6tXAehc8gihgkELyA3EfBZ78y6-rL4XK4HoFhgbfTq6zG8';
 const privateVapidKey='NroHysZtQvgcnTxexnHdkuK1Dh2KWge-lr7Zs8JC-sc';
 
-webpush.setVapidDetails('mailto:test@test.com', publicVapidKey, privateVapidKey);
+webpush.setVapidDetails(
+    'mailto:test@test.com', 
+    publicVapidKey, 
+    privateVapidKey
+);
 
 //Subscribe Route
 app.post('/subscribe', (req, res) => {
@@ -28,7 +32,9 @@ app.post('/subscribe', (req, res) => {
     const payload = JSON.stringify({ title: 'Push Test' });
 
     //Pass Object into sendNotification
-    webpush.sendNotification(subscription, payload).catch(err => console.error(err));
+    webpush
+        .sendNotification(subscription, payload)
+        .catch(err => console.error(err));
 });
 
 const port = 5000;
