@@ -11,8 +11,8 @@ app.use(express.static(path.join(__dirname, 'client')));
 app.use(bodyParser.json());
 
 //Enter Public and Private Keys Here
-const publicVapidKey ='BOtEUniVhvsJsecdOY15dHRbASpGG-ZvPPvNerUgm6tXAehc8gihgkELyA3EfBZ78y6-rL4XK4HoFhgbfTq6zG8';
-const privateVapidKey='NroHysZtQvgcnTxexnHdkuK1Dh2KWge-lr7Zs8JC-sc';
+const publicVapidKey ='';
+const privateVapidKey='';
 
 webpush.setVapidDetails(
     'mailto:test@test.com', 
